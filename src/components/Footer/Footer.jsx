@@ -83,7 +83,7 @@ export default function Footer() {
                     <Link to="/privacy">Privacy Policy</Link>
                   </li>
                   <li className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200">
-                    <Link to="/return">Shipping And Delivery</Link>
+                    <Link to="/shippingpolicy">Shipping And Delivery</Link>
                   </li>
                   <li className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200">
                     <Link to="/shipping">Cancellation & Refund Policy</Link>

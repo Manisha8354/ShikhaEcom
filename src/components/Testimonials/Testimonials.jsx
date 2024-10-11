@@ -1,29 +1,31 @@
 import React from "react";
 import Slider from "react-slick";
-
+import img from "../../assets/testimpnial.jpeg"
+import img1 from "../../assets/testimonial.jpeg"
+import img2 from "../../assets/testimonial1.jpeg"
 const TestimonialData = [
   {
     id: 1,
-    name: "JANHVI",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://img.freepik.com/free-photo/smiling-blond-woman-shows-ok-zero-gesture-no-problem-yes-alright-approve-smth-give-positive-feedback_176420-40382.jpg",
+    name: "Pratiksha Mathur",
+    text: "I absolutely love the Indo-Western jewelry from Alankaar the art of beads! The pieces are not only stunning but also versatile enough to wear with both traditional and modern outfits. I've received so many compliments!",
+    img: img,
   },
   {
     id: 2,
-    name: "SUMAN",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://media.istockphoto.com/id/1135381120/photo/portrait-of-a-young-woman-outdoors-smiling.jpg?s=612x612&w=0&k=20&c=T5dukPD1r-o0BFqeqlIap7xzw07icucetwKaEC2Ms5M=",
+    name: "Shweta",
+    text: "I absolutely love the Indo-Western jewelry from Alankaar The Art Of Beads! The pieces are not only stunning but also versatile enough to wear with both traditional and modern outfits. I've received so many compliments!",
+    img: img1,
   },
   {
     id: 3,
-    name: "ANSHIKA",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
-    img: "https://media.istockphoto.com/id/1145045107/photo/portrait-of-a-beautiful-mature-indian-woman.jpg?s=612x612&w=0&k=20&c=ezBRqDoUXJmSx2uoVUm0kw6Dj0N4CxtS49CoGs2TeKw=",
+    name: "Shipra Nishant Mathur",
+    text: "Alankaar The Art Of Beads' work is unique and exquisite! I absolutely adore my three-layered crystal and pearls handmade necklace set. The timeless, elegant design always gets compliments and makes me feel special every time I wear it. Truly a masterpiece",
+    img: img2,
   },
   {
     id: 5,
-    name: "VIRAJ",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "VIRUSHKA",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore consectetur adipisicing elit. ",
     img: "https://images.pexels.com/photos/19130891/pexels-photo-19130891/free-photo-of-photo-of-a-young-woman-in-a-patterned-shirt.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   },
 ];
