@@ -12,6 +12,8 @@ import Layout from "./Layout.jsx";
 import Returnpolicy from "./components/Returnpolicy/Returnpolicy.jsx";
 import Shipping from "./components/Shipping/Shipping.jsx";
 import Contact from "./components/contact/Contact.jsx";
+import Terms from "./components/termand Privacy/Terms.jsx";
+import Privacy from "./components/termand Privacy/Privacy.jsx";
 
 let router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +23,8 @@ let router = createBrowserRouter(
     <Route path="/return" element={<Returnpolicy/>}/>
     <Route path="/shipping" element={<Shipping/>}/>
     <Route path="/contact" element={<Contact/>}/>
+    <Route path="/terms" element={<Terms/>}/>
+    <Route path="/privacy" element={<Privacy/>}/>
     </>
   )
 )

@@ -4,6 +4,9 @@ import Footer from '../Footer/Footer'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from 'axios';
+import backgroundImage from '../../assets/contact.jpeg'
+import img from '../../assets/contact4.jpeg'
+import Testimonials from "../Testimonials/Testimonials";
 
 export default function Contact() {
     React.useEffect(() => {
@@ -91,7 +94,12 @@ export default function Contact() {
       <Navbar/>
 
 
-      <div className="relative w-full h-96 bg-cover bg-center" style={{ backgroundImage: `url(https://st2.depositphotos.com/1001092/8996/i/450/depositphotos_89963472-stock-photo-herbs-and-spices-selection.jpg)` }}>
+      <div
+      className="relative w-full h-96 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+    >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center">
@@ -119,11 +127,11 @@ export default function Contact() {
 
               {/* Paragraph with phone number */}
               <p className="text-white text-sm sm:text-lg md:text-xl mt-4">
-               +1 (604) 556-7560
+               +91 9712982168
               </p>
               <p className="text-white text-sm sm:text-lg md:text-xl mt-4">
   <a href="mailto:indianrasoi15@gmail.com" className="hover:underline">
-    indianrasoi15@gmail.com
+  shikha.b79@gmail.com
   </a>
 </p>
 
@@ -143,85 +151,87 @@ export default function Contact() {
 
         {/* Contact Form and Image Section */}
         <div className="flex flex-col md:flex-row items-center gap-10">
-          {/* Image Section */}
-          <div className="w-full md:w-3/4">
-            <img
-              className="w-full h-auto rounded-lg shadow-md"
-              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D"
-              alt="Contact Us"
-            />
-          </div>
+  {/* Image Section */}
+  <div className="w-full md:w-[600px] h-[600px]"> {/* Ensure this container takes full height */}
+    <img
+      className="w-full h-full object-cover rounded-lg shadow-md" // 'h-full' ensures the image matches the form height
+      src={img}
+      alt="Contact Us"
+    />
+  </div>
 
-          {/* Contact Form Section */}
-          <div className="w-full md:w-3/4 bg-black p-8 rounded-lg shadow-lg">
-            <form method="post" onSubmit={handleSubmit}>
-              {/* Name Field */}
-              <div className="mb-6">
-                <label className="block text-gray-100 text-sm font-bold mb-2" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  className={`w-full px-4 py-3 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500 ${formErrors.name ? "border-red-500" : ""}`}
-                  id="name"
-                  type="text"
-                  placeholder="Your Name"
-                  value={name}
-                  onChange={handleInputChange}
-                />
-                {formErrors.name && (
-                  <p className="text-red-500 text-xs mt-1">{formErrors.name}</p>
-                )}
-              </div>
-
-              {/* Email Field */}
-              <div className="mb-6">
-                <label className="block text-gray-100 text-sm font-bold mb-2" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className={`w-full px-4 py-3 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500 ${formErrors.email ? "border-red-500" : ""}`}
-                  id="email"
-                  type="email"
-                  placeholder="Your Email"
-                  value={email}
-                  onChange={handleInputChange}
-                />
-                {formErrors.email && (
-                  <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>
-                )}
-              </div>
-
-              {/* Message Field */}
-              <div className="mb-6">
-                <label className="block text-gray-100 text-sm font-bold mb-2" htmlFor="message">
-                  Message
-                </label>
-                <textarea
-                  className={`w-full px-4 py-3 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500 ${formErrors.message ? "border-red-500" : ""}`}
-                  id="message"
-                  rows="5"
-                  placeholder="Your Message"
-                  value={message}
-                  onChange={handleInputChange}
-                ></textarea>
-                {formErrors.message && (
-                  <p className="text-red-500 text-xs mt-1">{formErrors.message}</p>
-                )}
-              </div>
-
-              {/* Submit Button */}
-              <div className="text-center">
-                <button
-                  className="bg-gray-950 text-white px-6 py-3 rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition duration-300 ease-in-out"
-                  type="submit"
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+  {/* Contact Form Section */}
+  <div className="w-full md:w-[600px] bg-orange-100 p-8 rounded-lg shadow-lg h-[600px]"> {/* Form container takes full height */}
+    <form method="post" onSubmit={handleSubmit}>
+      {/* Name Field */}
+      <div className="mb-6">
+        <label className="block text-gray-950 text-sm font-bold mb-2" htmlFor="name">
+          Name
+        </label>
+        <input
+          className={`w-full px-4 py-3 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500 ${formErrors.name ? "border-red-500" : ""}`}
+          id="name"
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={handleInputChange}
+        />
+        {formErrors.name && (
+          <p className="text-red-500 text-xs mt-1">{formErrors.name}</p>
+        )}
       </div>
+
+      {/* Email Field */}
+      <div className="mb-6">
+        <label className="block text-gray-950 text-sm font-bold mb-2" htmlFor="email">
+          Email
+        </label>
+        <input
+          className={`w-full px-4 py-3 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500 ${formErrors.email ? "border-red-500" : ""}`}
+          id="email"
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={handleInputChange}
+        />
+        {formErrors.email && (
+          <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>
+        )}
+      </div>
+
+      {/* Message Field */}
+      <div className="mb-6">
+        <label className="block text-gray-950 text-sm font-bold mb-2" htmlFor="message">
+          Message
+        </label>
+        <textarea
+          className={`w-full px-4 py-3 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500 ${formErrors.message ? "border-red-500" : ""}`}
+          id="message"
+          rows="5"
+          placeholder="Your Message"
+          value={message}
+          onChange={handleInputChange}
+        ></textarea>
+        {formErrors.message && (
+          <p className="text-red-500 text-xs mt-1">{formErrors.message}</p>
+        )}
+      </div>
+
+      {/* Submit Button */}
+      <div className="text-center">
+        <button
+          className="bg-gray-950 text-white px-6 py-3 rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 transition duration-300 ease-in-out"
+          type="submit"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+      </div>
+      <Testimonials/>
       <Footer/>
       </>
     </div>

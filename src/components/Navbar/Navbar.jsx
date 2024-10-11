@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Logo from "../../assets/logoshikha.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping, FaUser, FaHeart, FaBars } from "react-icons/fa6";
-import { FaCaretDown } from "react-icons/fa";
 
 const Menu = [
   {
@@ -27,30 +26,7 @@ const Menu = [
   },
 ];
 
-const DropdownLinks = [
-  {
-    id: 1,
-    name: "Trending Jewellary",
-    link: "/#",
-  },
-  {
-    id: 2,
-    name: "Best Selling",
-    link: "/#",
-  },
-  {
-    id: 3,
-    name: "Top Rated",
-    link: "/#",
-  },
-];
-
 export default function Navbar({ handleOrderPopup }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen); // Toggles dropdown visibility
-  };
-
   const [isOpen, setIsOpen] = useState(false); // Hamburger menu toggle
 
   // Function to toggle hamburger menu
@@ -123,28 +99,11 @@ export default function Navbar({ handleOrderPopup }) {
             </li>
           ))}
 
-          {/* Simple Dropdown and Links */}
-          <li className="group relative cursor-pointer">
-            <a href="#" className="flex items-center gap-[2px] py-2">
-              Trending Products
-              <span>
-                <FaCaretDown className="transition-all duration-200 group-hover:rotate-180" />
-              </span>
+          {/* "About Us" Link Without Dropdown */}
+          <li className="cursor-pointer">
+            <a href="/about" className="flex items-center gap-[2px] py-2">
+              About Us
             </a>
-            <div className="absolute z-[9999] hidden group-hover:block w-[200px] rounded-md bg-white p-2 text-black shadow-md">
-              <ul>
-                {DropdownLinks.map((data) => (
-                  <li key={data.id}>
-                    <a
-                      href={data.link}
-                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
-                    >
-                      {data.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </li>
         </ul>
       </div>
@@ -186,40 +145,11 @@ export default function Navbar({ handleOrderPopup }) {
             ))}
           </ul>
 
-          {/* Mobile dropdown */}
-          <li className="relative cursor-pointer">
-            <a
-              href="#"
-              className="flex items-center gap-[2px] py-2"
-              onClick={toggleDropdown} // Toggling dropdown on click
-            >
-              Trending Products
-              <span>
-                <FaCaretDown
-                  className={`transition-all duration-200 ${
-                    isDropdownOpen ? "rotate-180" : ""
-                  }`} // Rotates the icon when dropdown is open
-                />
-              </span>
+          {/* "About Us" Link Without Dropdown */}
+          <li className="cursor-pointer">
+            <a href="/about-us" className="flex items-center gap-[2px] py-2">
+              About Us
             </a>
-
-            {/* Conditionally rendering the dropdown */}
-            {isDropdownOpen && (
-              <div className="absolute w-[200px] rounded-md bg-white p-2 text-black shadow-md">
-                <ul>
-                  {DropdownLinks.map((data) => (
-                    <li key={data.id}>
-                      <a
-                        href={data.link}
-                        className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
-                      >
-                        {data.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </li>
         </div>
       </div>
